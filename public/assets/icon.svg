@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="iconBrandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#327c8c" />
+      <stop offset="100%" stop-color="#1b525e" />
+    </linearGradient>
+    <linearGradient id="iconAccentGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4bb0c4" />
+      <stop offset="100%" stop-color="#78cce0" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="26" fill="url(#iconBrandGrad)" />
+  <path d="M50 25C40 25 30 29 30 39C30 48 33 55 36 64C39 73 40 79 44 79C47 79 47 72 50 63C53 72 53 79 56 79C60 79 61 73 64 64C67 55 70 48 70 39C70 29 60 25 50 25Z" fill="#ffffff" fill-opacity="0.95" />
+  <path d="M72 19L74.5 26.5L82 29L74.5 31.5L72 39L69.5 31.5L62 29L69.5 26.5Z" fill="url(#iconAccentGrad)" />
+</svg>
