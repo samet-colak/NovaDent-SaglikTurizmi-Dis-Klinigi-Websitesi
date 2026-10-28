@@ -146,21 +146,7 @@ export default function App() {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
-  const is404 = currentPath !== '/' && currentPath !== '' && currentPath !== '/index.html';
-
-  if (is404) {
-    return (
-      <NotFound
-        currentLang={currentLang}
-        onChangeLang={(lang) => setCurrentLang(lang)}
-        onGoHome={(targetHref = '/') => {
-          if (targetHref.includes('#')) {
-            window.location.href = targetHref;
-          } else {
-            window.history.pushState({}, '', '/');
-            setCurrentPath('/');
-          }
-        }}
+  const cleanPath=(currentPath||"").replace(/\/index\.html$/,"").replace(/\/+$/,"");const isHome=!cleanPath||cleanPath===""||cleanPath==="/"||cleanPath.includes("NovaDent")||cleanPath.includes("Novadent");const is404=!isHome;if(is404){return(<NotFound currentLang={currentLang} onChangeLang={(l)=>setCurrentLang(l)} onGoHome={()=>{window.location.href="./";}}
       />
     );
   }
